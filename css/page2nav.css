@@ -1,0 +1,87 @@
+    /* 导航栏样式 */
+    .navbar {
+        /* position: absolute; */
+        /* top: 25px; */
+        /* left: 14%; */
+        /* transform: translate(-50%, -50%); */
+        background:transparent;
+        overflow: hidden;
+        min-width: 500px;
+        /* width: 500px; */
+        /* background-color: pink; */
+        height: 200px;
+        margin-top: 170px;
+    }
+
+    /* 直接设置内边距外边距撑大盒子 */
+    .navbar a {
+        /* float: left; */
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 3px 5px;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    .dropdown {
+        /* float: left; */
+        display: inline-block;
+        /* overflow: hidden; */
+        position: relative;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 10px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 3px 5px;
+        background-color: inherit;
+        margin: 0;
+        /* height: 50px; */
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn:hover {
+        background-color: #555;
+    }
+
+    .dropdown-content {
+        display: none;
+        /* height: 50px; */
+        /* display: block; */
+        /* display: flex;
+        flex-direction:column ;
+        justify-content: start; */
+        position: absolute;
+         background:black; 
+        /* background-color: pink; */
+        min-width: 40px;
+        /* z-index: 200; */
+        color: white;
+        z-index: 1000;
+    }
+    /* .header.navbar.dropdown-content{
+        display: block;
+    } */
+    .dropdown-content a {
+        display: block;
+        float: none;
+        color: white;
+        padding: 3px 4px;
+        text-decoration: none;
+    /* z-index: 201; */
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #555;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block  ;
+    }
+
+    
+
+  

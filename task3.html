@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人详情页</title>
+    <link rel="stylesheet" href="css/styletask3.css">
+    <link rel="stylesheet" href="font_4486808_g74sfns466p\iconfont.css">
+    <link rel="stylesheet" href="font_ujxqnfh7g3\iconfont.css">
+    
+</head>
+<body>
+    <!-- 开头头顶 -->
+    <!-- 把每个块用大盒子装住，布局问题 -->
+    <div class="header-box">
+        
+        <div class="mixbox1" style=" position: relative; ;height: 100px;width: 600px;">
+            <!-- style="float: left;position: relative;width: 600px;" -->
+      <div class="logobox" >
+        <img class="logoboximg" src="image\logotencent.png" alt="">
+      </div>
+    <div class="navbar">
+        <a href="#首页">首页</a>
+        <a href="#电视剧">电视剧</a>
+        <a href="#电影">电影</a>
+        <a href="#综艺">综艺</a>
+        <a href="#动漫">动漫</a>
+        <a href="#少儿">少儿</a>
+        <a href="#纪录片">纪录片</a>
+        <a href="#游戏">游戏</a>
+        <a href="#全部">全部<span class="iconfont icon-quanbu"></span></a>
+    </div>
+    </div>
+    
+    <div class="searchbox" style="height: 100px;width: 400px;  ">
+      
+        <div class="search-bar" style="position: relative;">
+            <input type="text" class="search-input" placeholder="搜索...">
+            <button class="search-button">全网搜<span class="iconfont icon-sousuo"></span></button>
+            <div class="samllbox iconfont icon-remen" style="position: absolute;right: 100px; height: 20px;width: 50px;">
+            <span style="color: rgb(161, 29, 29);font-size: 12px;">钓鱼</span>
+            </div>
+        </div>
+    </div>
+    <div class="uselistbox" style="padding-right: 40px;" >
+        <div class="user">
+        
+            <a href="#"><img src="image\vip666-removebg-preview.png" alt="vip氪金"></a>
+            <a href="#">
+                <span class="iconfont icon-youxi"></span>
+            </a>
+            <a href="#">
+                <span class="iconfont icon-shenglvehao"></span>
+            </a>
+            <a href="#">
+                <span class="iconfont icon-shijian"></span>
+            </a>
+            <a href="#" class="logister" id="qqlogistbutton">
+                <img src="image\picuser.webp" alt="用户登录">
+            </a>
+        </div>
+    </div>
+      
+    </div>
+    <!-- 开头结束 -->
+
+     <div class="main" style="min-height: 1000px;">
+<!-- 左旁栏开始 -->
+        <div class="left">
+            <div class="left1-card">
+                <div class="left1-avatar">
+                    <img id="avatarImg1" class="left1-avatar-img" src="" alt="">
+                    <input type="file" id="fileInput" style="position: absolute;z-index: 2; width: 80px;height: 80px;border-radius: 50%;background: none;opacity: 0;" accept="image/*">
+                </div>
+                <div class="left1-username">用户名</div>
+                <div class="left1-vip-notice">开通VIP看大片</div>
+                <button class="left1-vip-button" id="logoutButton5">注销</button>
+            </div>
+            <div class="left2-navigation-container">
+                <a href="#" id="1" class="nav-link first-link iconfont icon-dingdan">&nbsp创作平台</a>
+                <a href="#" id="2" class="nav-link first-link iconfont icon-gerenzhuye">&nbsp个人主页</a>
+                <a href="#" id="3" class="nav-link iconfont icon-shijian">&nbsp观看历史</a>
+                <a href="#" id="4" class="nav-link iconfont icon-jiazhui">&nbsp加追</a>
+                <a href="#" id="5" class="nav-link iconfont icon-focus">&nbsp收藏</a>
+                <a href="#" id="6" class="nav-link iconfont icon-shoucang">&nbsp订阅</a>
+                <a href="#" id="7" class="nav-link iconfont icon-shangchuan">&nbsp上传视频</a>
+                <a href="#" id="8" class="nav-link iconfont icon-VIP">&nbspVIP会员</a>
+                <a href="#" id="9" class="nav-link iconfont icon-zuanshi">&nbsp我的钻石</a>
+                <a href="#" id="10" class="nav-link iconfont icon-guanli">&nbsp账号设置</a>
+                <a href="#" id="11" class="nav-link icon-dingdan iconfont" >&nbsp订单</a>
+                <a href="#" id="12" class="nav-link icon-dingdan iconfont">登出</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="shoucang">
+                <h2>收藏视频</h2>
+                <div class="shoucanginput">
+                    <input class="scinput" type="text">
+                    <button class="submitname">搜索</button>
+                </div>
+                <div class="abc"><button style="color: rebeccapurple;">abc</button></div>
+                <div class="shoucang-box">
+                    <!-- <div class="example">
+                        <div class="shoucangimg"><img class="img0" src="image/jinbu.jpg" alt=""></div>
+                        <div class="content">人民的名义</div>
+                        <div class="process">观看至%36</div>
+                    </div>
+                    <div class="example"></div>
+                    <div class="example"></div>
+                    <div class="example"></div> -->
+                </div>
+            </div>
+            <div class="history">
+                <button id="clearButton">Clear All</button>
+                <h2>观看历史</h2>
+                <h1>刷新</h1>
+                <div class="history-box">
+                    <!-- <div class="example">
+                        <div class="historyimg"><img class="img0" src="image/jinbu.jpg" alt=""></div>
+                        <div class="content">人民的名义</div>
+                        <div class="process">观看至%36</div>
+                    </div>
+                    <div class="example"></div>
+                    <div class="example"></div>
+                    <div class="example"></div> -->
+                </div>
+            </div>
+        </div>
+<!-- 左旁栏结束 -->
+        </div>
+     
+    
+
+
+    <!-- 尾部声明 -->
+    <div class="foot" style="display: flex; justify-content: center;  margin-left: auto;margin-right: auto; height: 200px;width: 100%;border-top: 2px solid red;">
+        <footer style=" width: 800px;background-color:none;display: flex;justify-content: space-around;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 colmd">
+                        <h5>关于我们</h5>
+                        <p>这里是您的公司或组织的介绍信息。</p>
+                    </div>
+                    <div class="col-md-4 colmd">
+                        <h5>联系我们</h5>
+                        <ul>
+                            <li>地址：1234 街道，城市，国家</li>
+                            <li>电话：+1234567890</li>
+                            <li>邮箱：info@example.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 colmd">
+                        <h5>关注我们</h5>
+                        <ul class="social-media">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 colmd">
+                        <p>&copy; 2023 公司名称. A</p>
+                    
+                    </div>
+                </div>
+               
+                   
+            </div>
+        </footer>
+    </div>
+    <!-- 尾部声明结束 -->
+</body>
+<script src="js\task3.js"></script>
+<script src="js\3.5picsubmit.js"></script>
+<script src="js\3.2dengchu.js"></script>
+<script src="js\3.3zhuxiao.js"></script>
+<script src="js\3.4shoucang.js"></script>
+<script src="js\3.1-history.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- <script src="picsubmit.js"></script> -->
+<!-- <script>fetchData(126)</script> -->
+<script> 
+
+    handleStorageEvent(event)
+   
+    </script>
+    <script src="js\qqlogist.js"></script>
+    <script>p2xuanranpic()</script>
+    <script></script>
+</html>

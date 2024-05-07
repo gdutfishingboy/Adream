@@ -1,0 +1,720 @@
+/* 全局设计 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 加了box-sizing: border-box属性，
+    padding和border的值就不会在影响元素的宽高，
+    相当于把padding和border的值都算在content里，知乎 */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    outline: none;
+    /* 不显示轮廓线，输入时默认有轮廓线 */
+    border: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    /* 复习，适用于行内和置换元素，对齐中线 */
+    /* 垂直对齐方式喔 */
+}
+
+body {
+    font-family: numFont,
+        PingFangSC-Regular,
+        Tahoma,
+        "Microsoft Yahei",
+        sans-serif,
+        helvetica,
+        "Segoe UI";
+        /* 网页复制 */
+    background: #141414;
+    position: relative;
+}
+
+
+
+/* header设计 */
+.header {
+    position: fixed;
+    /* 头部框架一直至于顶层 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    /* 最头顶那一列 */
+    z-index: 1000;
+    background-image: linear-gradient(0deg, rgba(20, 20, 20, 0) 1%, rgba(20, 20, 20, 0.7) 99%);
+    /* 渐变 */
+    padding: 0 40px;
+
+
+    display: flex;
+    align-items: center;
+    /* 子项目 */
+    justify-content: space-between;
+    /* 一头一尾其他中间 */
+
+}
+
+.header .logo {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .logo .logoBox {
+    position: relative;
+    /* width: 45px;
+    height: 45px; */
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; 图标变圆*/
+    z-index: 99;
+    /* 叠放顺序 */
+    /* background: #141411; */
+    /* background-color: pink; */
+}
+
+/*
+放上去图像变大
+.header .logo .avatarBox:hover {
+    transition: all 0.3s;
+    transform: translateY(60%) scale(1.6);
+}  */
+
+.header .logo .logoBox .logoImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+/* logo部分 */
+
+
+
+
+/* 查找部分 */
+.header .searchmother{
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.header .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: hidden;
+    超过影藏 */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* 他爹的一半 */
+     /* transform: translate(-50%, -50%);  */
+    width: 500px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    /* background-color: pink; */
+    border-radius: 36px; 
+}
+
+.header .search input {
+    padding-left: 25px;
+    flex: 1;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    background: transparent;
+    /* 透明 */
+    /* outline: auto; */
+}
+
+.header .search input:focus{
+    /* 聚焦以后显示 */
+    border:0.5px solid  #fff;
+    border-radius: 36px;
+}
+.header .search input::placeholder {
+    color: #fff9;
+}
+
+.header .search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 36px;
+    /* 焦点手势 */
+}
+
+.header .search button .iconfont {
+    font-size: 16px;
+}
+
+.header .search button:hover {
+    
+    background: rgba(255, 255, 255, 0.3);
+}
+.search-ul{
+    display: none;
+    position: absolute;
+    left: 30px;
+    width: 300px;
+    height: 50px;
+    /* padding-left: 25px; */
+    overflow-y: auto;
+    
+    background-color: rgb(31, 30, 30);
+}
+.vedio-item{
+    color: white;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+.vedio-item:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+/* 搜索部分结束 */
+
+
+
+/* 用户栏开始 */
+.header .user {
+    position: absolute;
+    top:0;
+    left: calc(50% + 450px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    /* background-color: pink; */
+    /* 被自动撑大 */
+}
+
+.header .user a {
+    margin: 0 10px;
+    color: #fff9;
+}
+
+.header .user a .iconfont {
+    font-size: 23px;
+}
+
+.header .user a:hover {
+    color: #fff;
+}
+
+.header .user img {
+    width: 35px;
+}
+
+.header .user .logister {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    /* 圆形捏 */
+    overflow: hidden;
+    /* 多的搞掉 */
+}
+
+.header .user .logister img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 头部结束 */
+
+
+/* 栏开始 */
+.aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    padding-top: 150px;
+    height: 70vh;
+    z-index: 99;
+    direction: rtl;
+    background-image: linear-gradient(-90deg, rgba(20, 20, 20, 0) 1%, rgba(20, 20, 20, 0.6) 99%);
+    overflow-y: auto;
+    /* 超过就出现滚动条auto一下 */
+    overflow-x: hidden;
+    /* 基本不超过，消掉 */
+  
+}
+
+.aside:hover::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+    display: block;
+}
+/* 滚动条样式 */
+
+.aside::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+    display: none;
+}
+
+.aside::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 3px;
+    /* 滚动条轨道 */
+}
+
+.aside::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* 滚动条 */
+}
+
+/* .aside .nav {
+    direction: ltr;
+} 从左到右捏*/
+
+.aside .nav li {
+    display: flex;
+    justify-content: flex-end;
+    direction: ltr;
+    /* 主轴末端对齐li向nav对齐，li被a撑开 */
+    height: 48px;
+    /* background-color: pink; */
+}
+
+.aside .nav li a {
+    display: flex;
+    align-items: center;
+    /* a儿子span */
+    width: 160px;
+    height: 100%;
+    color: rgb(77, 76, 76);
+}
+
+.aside .nav li a .iconfont {
+    margin-left: 20px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.aside .nav li a:hover {
+    transition: all 0.5s;
+    color: #fff;
+}
+
+/* 栏结束 */
+
+
+/* 主题开始 */
+/* @keyframes hide1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+.content {
+    color: #fff;
+    position: relative;
+    /*要确定.content .banner的宽度，需要查看其父元素.content的宽度。
+    然而，在给出的样式中，.content的宽度也未被明确指定。如果.content是直接放在body内，
+    且没有其他样式影响，那么它会继承body的宽度，这通常默认为整个页面的宽度，即100%。 */   
+    /* 继承body */
+}
+.content #showpic{
+    position: absolute;
+    top: 0;
+    left: calc(50% - 700px);
+    height: 650px;
+    width: 1400px;
+    /* background-color: pink; */
+    background-size: cover;
+}
+#video-background{
+    height: 650px;
+        width: 1400px;
+}
+
+.content .banner {
+    position: relative;
+    height: 650px;
+    /* width: 1100px; */
+    /* background-color: rgb(232, 232, 230); */
+    background: transparent;
+    /* 继承body，宽为全屏 */
+
+    /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* min-height: 100vh; */
+}
+
+.content .banner .mask-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.1);
+    /* 整体 */
+    /* 0.1透明度 */
+    z-index: 11;
+}
+
+.content .banner .mask-b {
+    height: 260px;
+    width: 100%;
+    position: absolute;
+    /* 底下那一块的 */
+    left: 0;
+    bottom: 0;
+    /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #141414); */
+    /* 渐变:默认从上往下*/
+    z-index: 11;
+    background: linear-gradient(rgba(0, 0, 0, 0), #141414);
+}
+
+.content .banner .mask-l {
+    height: 100%;
+    width: 800px;
+    z-index: 11;
+    position: absolute;
+    /* 旁栏那一块 */
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(270deg, rgba(20, 20, 20, 0) 1%, rgba(20, 20, 20, 0.6) 100%);
+    /* 0deg:自下往上；90：左到右；270：右到左 */
+}
+
+.content .banner .text-banner {
+    position: absolute;
+    bottom: 10%;
+    left: calc(180px + 22px);
+    width: 368px;
+    height: 390px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    /* 竖排列 */
+    justify-content: flex-end;
+    color: #fff;
+    /* background-color: pink; */
+    
+}
+
+.content .banner .text-banner .pic {
+    margin-bottom: 25px;
+    width: 200px;
+    /* background-color: palegoldenrod; */
+}
+
+.content .banner .text-banner .t1 {
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: pink;
+    /* background-color: yellow; */
+}
+
+/* .content .banner .text-banner .t2 {
+    /* line-height: 25px;
+    margin-bottom: 10px; */
+    /* background-color:red; 
+} */
+.content .banner .text-banner .bottom {
+    color: gold;
+    font-weight: 400;
+    
+}
+
+.content .banner .text-banner .btn3 {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 居中 */
+    width: 152px;
+    height: 52px;
+    background: rgba(253, 255, 254, 0.15);
+    border-radius: 36px;
+    font-size: 20px;
+    cursor: pointer;
+    /* 播放栏 */
+    margin-top: 25px;
+}
+
+.content .banner .text-banner .btn3:hover{
+    border: 1px solid gold;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+/* 表面层 */
+
+
+
+
+/* 下端主页 */
+.content .video-banner {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-left: calc(180px + 30px);
+    /* padding-left: 180px; */
+    padding-right: 30px;
+    padding-bottom: 100px;
+    width: 1200px;
+    box-sizing: content-box;
+    /* 内容为大 */
+    /* background-color: pink; */
+}
+
+.content .head {
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 45px;
+    /* background-color: rgb(48, 48, 46); */
+}
+
+.content .head .left {
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.content .head .left .tit {
+    
+    font-size: 30px;
+    /* color: orange; */
+    letter-spacing: 0;
+}
+
+.selected  {
+    
+    color: white !important;
+    /* background-color: blue; */
+    /* 这里可以修改选中时的背景色 */
+}
+
+.content .head .right {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.4;
+    /* 透明度 */
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.content .head .right:hover {
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.content .video-top{
+    position: relative;
+    left: -53px;
+    top: 0;
+}
+.content .video-top .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /* background-color: skyblue; */
+}
+
+.content .video-top .list .item {
+    position: relative;
+    margin-bottom: 40px;
+    width: 210px;
+    height: 177px;
+    overflow: hidden;
+}
+
+.content .video-top .list .item .pic {
+    display: block;
+    position: relative;
+    width: 210px;
+    height: 120px;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* 多的藏起来，懒得修图气死我啦 */
+}
+
+.content .video-top .list .item .pic .videoPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 3;
+}
+
+.content .video-top .list .item .pic .tag {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    width: 36px;
+    height: 24px;
+    z-index: 5;
+}
+
+.content .video-top .list .item .pic .tip {
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.content .video-top .list .item .tit {
+    display: block;
+    margin-top: 8px;
+    color: #fff;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+    /* …… */
+    white-space: nowrap;
+    /* 不换行 */
+}
+
+.content .video-top .list .item .sub {
+    display: block;
+    margin-top: 4px;
+    opacity: 0.4;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+/* 第二部分 */
+.content .head .left .list {
+    display: flex;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    /* 竖线 */
+}
+
+.content .head .left .list a {
+    margin-left: 40px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.content .head .left .list a:first-child {
+    margin-left: 0;
+}
+
+.content .head .left .list a:hover
+ {
+    transition: all 0.5s;
+    color: #fff;
+}
+
+
+.video1 {
+    width: 210px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 0;
+    display: block;
+}
+
+
+
+.super1:hover {
+    background-color: #666;
+}
+.super1:hover .jiazhuis {
+    display: block;
+}
+.super1:hover .video1 {
+    z-index: 9;
+}
+.jiazhui{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70%;
+    width: 20px;
+    height: 20px;
+    /* background-color: pink; */
+    z-index: 10;
+}
+
+/* video{
+    display: none ;
+    /* display: block; */
+/* } */
+/* video:hover{ */
+    /* display: block !important; */
+/* } */ 
+ .yellow {
+     color: yellow;
+ }
+
+
+ .progress-bar {
+     position: absolute;
+     z-index: 99999;
+     bottom: 5px;
+     left: 0;
+     width: 210px;
+     height: 2px;
+     overflow: hidden;
+     /* 防止内容溢出 */
+ }
+
+ .progress {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 2px;
+     background-color: orange;
+     width: 0px;
+ }

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本王的网页</title>
+    <link rel="stylesheet" href="css\styletask1.css">
+    <link rel="stylesheet" href="css\qq.css">
+    <link rel="stylesheet" href="css\lunbotu.css">
+    <link rel="stylesheet" href="font_4486808_g74sfns466p\iconfont.css">
+    <!-- <link rel="stylesheet" href="qq.css"> -->
+    <!-- 分开写方便看 -->
+</head>
+<body>
+     <div class="qqlogist" id="popupBox">
+    
+        <div class="qqbox">
+         <div class="qqheader">
+                <div class="qqback"><a href="#" style="color: black;text-decoration: none;">&lt</a></div>
+                <div class="qqtop" style="text-align: center;">QQ账号登录</div>
+                <div class="qqclose" id="closebox"><a href="#"
+                        style="text-decoration: none; color: black;">x</a></div>
+                <div class="hightlight" style="font-size: 22px;">登录即享高清内容</div>
+            </div>
+          <div class="qqleft"> 
+                <div class="qqcontainer">
+                    <h1 style="font-size: 16px;">密码登录</h1>
+                    <div class="wordcenter">
+                        <p style="font-size: 12px;">推荐使用<span style="color: #4285f4;font-size: 12px;">快捷登录</span>，防止盗号。</p>
+                    </div>
+    
+                    <div class="qqinput-fields">
+    
+    
+                        <input id="qqname" type="text" placeholder="支持QQ号/手机号登录">
+    
+    
+                    </div>
+                    <div class="qqinput-fields">
+    
+    
+                        <input id="qqword" type="password" placeholder="请输入密码">
+    
+    
+                    </div>
+                    <div class="qqbuttons">
+                        <button>登录</button>
+    
+                    </div>
+                    <div class="qqbuttons1">
+                        <button><span style="font-size: 12px;">找回密码</span></button>
+                        <button onclick="registerAccount()" style="font-size: 12px;">注册账号</button>
+                        <button style="font-size: 12px;">意见反馈</button>
+                    </div>
+                </div>
+            
+             </div>
+    
+            <div class="qqright">
+                <div class="qqouter-box">
+                    <div class="qqinner-box">
+                        <input type="radio" name="sex" id="sex">
+                        <label for="sex">全选<span style="color: #4285f4;">腾讯视频</span>将获得以下权限：</label>
+                        <br>
+                        <input type="radio" name="nu" id="nu">
+                        <label for="nu">使用你的QQ头像，名称信息。
+                            <br>
+                            授权即<span style="color: #4285f4;">同意服务协议</span>以及<span
+                                style="color: #4285f4;">隐私保护协议</span></label>
+                    </div>
+                    </div> 
+            </div>
+        </div>
+        </div>
+
+
+    <!-- 头部 -->
+    <header class="header">
+        <!-- logo部分 -->
+        <a href="#" class="logo">
+            <!-- 搞个彩蛋吧 -->
+            <div class="logoBox">
+                <img src="image\logotencent.png" alt="腾讯的logo" class="logoImg">
+            </div>
+        </a>
+        <!-- logo结束 -->
+
+        <!-- 搜索部分 -->
+        <div class="searchmother">
+        <div class="search" >
+            <input  type="text" id="boxB" placeholder="搜索内容">
+            <button><span class="iconfont  icon-sousuo" id="search-submit-button">搜索</span></button>
+        </div>
+        <ul class="search-ul" id="boxC">
+            <!-- <li class="vedio-item"><a href="" style="text-decoration: none;">广州市</a></li> -->
+           
+        </ul>
+        </div>
+        <!-- 搜索部分结束 -->
+
+        <!-- 用户栏 -->
+        <!-- 5个超链接都可以点点，以后再插图 -->
+        <div class="user">
+            
+            <a href="#"><img src="image\vip666-removebg-preview.png" alt="vip氪金"></a>
+            <a href="#">
+                <span class="iconfont icon-youxi"></span>
+            </a>
+            <a href="#">
+                <span class="iconfont icon-shenglvehao"></span>
+            </a>
+            <a href="#">
+                <span class="iconfont icon-shijian"></span>
+            </a>
+            <a href="#" class="logister" id="qqlogistbutton">
+                <img src="image\picuser.webp" alt="用户登录">
+            </a>
+        </div>
+        <!-- 用户栏结束 -->
+    </header>
+    <!-- 头部结束 -->
+
+    <!-- 左旁栏 -->
+    <aside class="aside">
+        <ul class="nav">
+            <li><a href="#"><span class="iconfont icon-duihua"></span>滚动</a></li>
+            <li><a href="#"><span class="iconfont "></span>免费专区</a></li>
+            <li><a href="#"><span class="iconfont "></span>电影</a></li>
+            <li><a href="#"><span class="iconfont icon-dianshiju"></span>电视剧</a></li>
+            <li><a href="#"><span class="iconfont "></span>动漫</a></li>
+            <li><a href="#"><span class="iconfont "></span>综艺</a></li>
+            <li><a href="#"><span class="iconfont "></span>NBA</a></li>
+            <li><a href="#"><span class="iconfont "></span>CBA</a></li>
+            <li><a href="#"><span class="iconfont "></span>钓鱼</a></li>
+            <li><a href="#"><span class="iconfont "></span>军旅</a></li>
+            <li><a href="#"><span class="iconfont "></span>纪录片</a></li>
+            <li><a href="#"><span class="iconfont "></span>恋综</a></li>
+        </ul>
+    </aside>
+    <!-- 栏结束 -->
+
+    <main class="content">
+        <div id="showpic">
+            <video id="video-background" autoplay loop muted style="display: block !important;">
+                <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                
+            </video>
+        </div>
+        <section class="banner" id="wyj">
+            <div class="mask-bg">
+                
+                </div>
+            </div> 
+            
+            <div class="mask-l"></div>
+            
+            <div class="mask-b"></div>
+
+
+            
+
+
+            <div class="text-banner">
+                <div class="pic"><img src="image\OIP-C-removebg-preview.png" alt=""></div>
+                <div class="t1"> 989大学签约钓手 </div>
+                <div class="t2">与你同行，年年有余！</div>
+                <div class=" bottom btn3 iconfont icon-bofang">
+                    
+                    播放正片
+                </div>
+                <div class="iconfont icon-jingyin" style="position: absolute;right: 380px;bottom: 12px;"></div>
+            </div>
+
+            <div class="container">
+                <div class="wrapper">
+                    <button id="prev" class="btn">&lt;</button>
+                    <div class="list5">
+                        <img class="item5" onclick="change(img0[0])" src="image\jinbu.jpg" alt="">
+                        <!-- id="picture1" -->
+                        <img class="item5"  src="image\jinbu.jpg" alt="">
+                        <img class="item5"  onclick="change(img0[1])" src="image\p1.png" alt="">
+                        <img class="item5"  onclick="change(img0[2])" src="image\p3.png" alt="">
+                        <img class="item5" src="image\p1.png" alt="">
+                        <img class="item5" src="image\p3.png" alt="">
+                        <img class="item5" src="image\jinbu.jpg" alt="">
+                        <img class="item5" src="image\jinbu.jpg" alt="">
+                        <img class="item5" src="image\p1.png" alt="">
+                        <img class="item5" src="image\p3.png" alt="">
+                        <img class="item5" src="image\jinbu.jpg" alt="">
+                        <img class="item5" src="image\jinbu.jpg" alt="">
+                    </div>
+                    <button id="next" class="btn">&gt;</button>
+                </div>
+                <!-- 滚动条 -->
+                <div class="scrollbar5">
+                    <!-- 滚动轨道 -->
+                    <div class="track5">
+                        <!-- 滚动滑块 -->
+                        <div class="thumb5">
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+        </section>
+
+        <!-- 下一个块级 -->
+        <section class="video-banner">
+
+
+            <div class="video-top">
+                <div class="head">
+                    <div class="left">
+                        <div class="tit">重磅热播</div>
+                        <div class="list">
+                            <a class="myLink" href="#" id="quanbu">全部</a>
+                            <a class="myLink" href="#" id="dianshiju">电视剧</a>
+                            <a class="myLink" href="#">NBA</a>
+                            <a class="myLink" href="#" id="FILM">电影</a>
+                            <a class="myLink" href="#">钢琴</a>
+                            <a class="myLink" href="#">摄影</a>
+                            <a class="myLink" href="#">美女</a>
+                        </div>
+                    </div>
+                    <div class="right" id="huanyihuan">换一换</div>
+                </div>
+                <div class="list  item-list" id="1.2-305">
+                    <!-- 1 -->
+                    <div class="item super1"   >
+                        <div class="jiazhui jiazhuis"  ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                        
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag" >
+                                <img src="image\vip.webp" alt="">
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                           
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                        
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                            </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit" > 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 3 -->
+                    <div class="item super1" id="super2">           
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang" ></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                        
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                            </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 4 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+   
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 5 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                        
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                            </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+
+
+
+                    <!-- 6 -->
+                    <div class="item super1">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                    
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    
+                    <!-- 7 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                                    <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                                        
+                                                </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 8 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                                    <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                                        
+                                                </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 9 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                    
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    <!-- 10 -->
+                    <div class="item super1" id="super2">
+                        <div class="jiazhui jiazhuis" ><span class="iconfont icon-shoucang"></span></div>
+                        <video class="video1" id="myVideo1" muted loop autoplay>
+                            <source src="vedio/15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                    
+                        </video>
+                        <a href="#" class="pic " id="videocontainer" style="position: relative;">
+                            <div class="tag">
+                                <img src="image\vip.webp" alt="">
+                    
+                            </div>
+                            <img src="image\jinbu.jpg" alt="" class="videoPic">
+                            <!-- <video class="video1" id="myVideo1" muted loop>
+                                                    <source src="vedio\15c6e381445af86d5069e54997d14f6b.mp4" type="video/mp4">
+                                        
+                                                </video> -->
+                            <div class="tip" style="position: absolute;z-index: 8;">更新至366集</div>
+                        </a>
+                        <a href="#" class="tit"> 地址废活性炭就让他 </a>
+                        <span class="sub" id="super3"> 座谈会昨天那如火如荼！ </span>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            
+
+           
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js\lunbotu.js"></script>
+    <script src="js\1.2-305.js"></script>
+    <script src="js\nb1.3-305(1).js"></script>
+    <script src="js\film1.3-305(1).js"></script>
+    <script src="js\1.6-304.js"></script>
+    <script src="js\1.7-304.js"></script>
+    <script src="js\1.5-303.js"></script>
+    <script src="js\qqlogist.js"></script>
+    <script src="js\reloading.js"></script>
+    <script src="js\3.1-history.js"></script>
+    
+   
+    <script>
+       
+            var img0 = [
+                'image/jinbu.jpg','image/p1.png','image/p3.png','none'
+            ]
+            function change(array){
+                document.getElementById('video-background').style.display = 'none';
+                document.getElementById('showpic').style.backgroundImage = "url(" + array[3] + ")";
+                document.getElementById('showpic').style.backgroundImage = "url("+ array +")";
+                console.log('666');
+                
+            }
+
+            //  var container1 = document.getElementById("videocontainer");
+            //     var video = document.getElementById("myVideo1");
+
+            //     container1.addEventListener("mouseover", function () {
+            //         playVideo();
+            //     });
+
+            //     container1.addEventListener("mouseout", function () {
+            //         pauseVideo();
+            //     });
+
+            //     function playVideo() {
+            //         video.style.display = "block";
+            //         video.currentTime = 0;
+            //         video.play();
+            //     }
+
+            //     function pauseVideo() {
+            //         video.pause();
+            //         video.style.display = "none";
+
+                    
+            //     }
+                //   var super2 = document.getElementById("super2");
+                //     var span = document.getElementById("super3");
+                //     var jiaZhui1 =document.getElementById("jiazhui1")
+                //     var originalContent = span.innerHTML;
+
+                //     super2.addEventListener("mouseover", function () {
+                //         jiaZhui1.style.display = 'block';
+                //         // span.innerHTML = "小标题：王耀佳<br>普通文段：他是最帅的";
+                //     });
+
+                //     super2.addEventListener("mouseout", function () {
+                //        jiaZhui1.style.display = 'none';
+                //         span.innerHTML = originalContent;
+                //     });
+                  // 获取盒子B和C元素
+                    var qqlogistbutton = document.getElementById('qqlogistbutton');
+                    var popupBox = document.getElementById('popupBox');
+                    var closebox = document.getElementById('closebox');
+
+                    // 监听输入框的focus事件
+                    qqlogistbutton.addEventListener('click', function () {
+                        // 显示盒子C
+                        popupBox.style.display = 'block';
+                    });
+
+                    // 监听输入框的blur事件
+                    closebox.addEventListener('click', function () {
+                        // 隐藏盒子C
+                        popupBox.style.display = 'none';
+                    });
+
+
+
+                    var boxB = document.getElementById('boxB');
+                        var boxC = document.getElementById('boxC');
+                        
+
+                        // 监听输入框的focus事件
+                        boxB.addEventListener('focus', function () {
+                            // 显示盒子C
+                            boxC.style.display = 'block';
+                        });
+
+                        // 监听输入框的blur事件
+                        boxB.addEventListener('blur', function () {
+                            // 隐藏盒子C
+                            // boxC.style.display = 'none';
+                            if (boxB.value.trim() === '') {
+                                    boxC.style.display = 'none';
+                                } 
+                              });
+                        // function checkAndHideBoxC() {
+                        //         if (boxB.value.trim() === '') {
+                        //             boxC.style.display = 'none';
+                        //         } 
+                        //     }
+
+                            // 每隔一段时间（例如每秒）检查一次 boxB 的内容并隐藏 boxC
+                            // setInterval(checkAndHideBoxC, 1); // 1000 毫秒 = 1 秒
+
+
+                    // qq的登录键
+                        var loginButtonqq = document.querySelector('.qqbuttons');
+
+                        loginButtonqq.addEventListener('click', function () {
+                            console.log('1111');
+                            qqlogist()
+                            
+                        });
+
+
+function videoprogress(){
+    const video = document.getElementById('myVideo1');
+    const progressBar = document.getElementById('progress');
+
+    video.addEventListener('timeupdate', () => {
+        const progress = (video.currentTime / video.duration) * 100;
+        progressBar.style.setProperty('width', progress + '%', 'important');
+        console.log('加载成功');
+    });
+    video.addEventListener('mouseenter', () => {
+        video.play();
+        progressBar.style.display = 'block';
+    });
+
+    // 当鼠标离开视频时，停止播放视频
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+        progressBar.style.display = 'none';
+    });
+}
+       videoprogress()        
+       
+       
+       function registerAccount() {
+            const username = prompt("请输入用户名（用户名必须含有英文和数字，至少八位）:");
+            const password = prompt("请输入密码（密码至少八位）:");
+
+            if (username === null || password === null) {
+                // 如果用户点击了取消按钮
+                alert("注册已取消！");
+                return;
+            }
+
+            if (!(/[a-zA-Z]/.test(username) && /\d/.test(username) && username.length >= 8)) {
+                // 如果用户名不符合要求
+                alert("用户名必须含有英文和数字，且至少八位！");
+                return;
+            }
+
+            if (password.length < 8) {
+                // 如果密码不符合要求
+                alert("密码至少八位！");
+                return;
+            }
+
+            
+           
+
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("User-Agent", "Apifox/1.0.0 (https://apifox.com)");
+            myHeaders.append("Accept", "*/*");
+            myHeaders.append("Host", "blog.zifeiyu.love");
+            myHeaders.append("Connection", "keep-alive");
+            myHeaders.append("Cookie", "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7aWQ9MTI2fSIsImlhdCI6MTcxNDkyNDE1MywiZXhwIjoxNzE3NTE2MTUzfQ.sYaIfkW5GJI_BvN0pVAx6idv0gkkd145DRHlHHUMPKLTWIYOp-gAhKPQaT4-SCuMXWoGqXcIXxssm9WImvr1aQ");
+
+            const raw = JSON.stringify({ "username": username, "password": password });
+
+            const requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://blog.zifeiyu.love/user/register", requestOptions)
+                .then(response => response.text())
+                .then(result => {alert("注册成功！");
+                 alert("用户名: " + username + "\n密码: " + password );
+            }
+            )
+                .catch(error => alert("注册失败：" + error));
+        }
+
+
+    </script>
+</body>
+</html>

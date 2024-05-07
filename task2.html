@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频详情页</title>
+    <link rel="stylesheet" href="css\p3.css">
+    <link rel="stylesheet" href="css\page2nav.css">
+    <link rel="stylesheet" href="css\message.css">
+    <link rel="stylesheet" href="css\selection.css">
+    <link rel="stylesheet" href="css\recommend.css">
+    <link rel="stylesheet" href="css\shortvedio.css">
+    <link rel="stylesheet" href="font_4486808_g74sfns466p\iconfont.css">
+    <link rel="stylesheet" href="css\qq.css">
+    <link rel="stylesheet" href="css\login.css">
+    <link rel="stylesheet" href="css\jindutiao.css">
+    <link rel="stylesheet" href="css\videocontrol.css">
+    <link rel="stylesheet" href="css\danmu.css">
+   
+    <!-- <link rel="stylesheet" href="message.js"> -->
+</head>
+<body>
+        <!-- 头部 -->
+        <header class="header">
+            <div class="blackpage" >
+<div class="login-box" id="popupBox1">
+    <!-- id="popupBox1" -->
+    <div class="h1">
+        <h1 style="font-weight: 400;font-size: 20px;">登录之后即可</h1>
+    </div>
+    <!-- 图标按钮区域 -->
+    <div class="loginicon-buttons">
+        <div class="blue-icon">
+            <div style="height: 40px;width: 40px;background-color: yellow;float: left;"></div>
+            <span style="font-size: 12px;line-height: 40px;float: left; margin-left: 10px;">老子天下第一</span>
+        </div>
+        <div class="grey-icon">
+            <div style="height: 40px;width: 40px;background-color: green;float: left;"></div>
+            <span style="font-size: 12px;line-height: 40px;float: left;margin-left: 10px;">老子天下第一</span>
+        </div>
+        <div class="orange-icon">
+            <div style="height: 40px;width: 40px;background-color: orange;float: left;"></div>
+            <span style="font-size: 12px;line-height: 40px;float: left;margin-left: 10px;">老子天下第一</span>
+        </div>
+        <div class="yellow-icon">
+            <div style="height: 40px;width: 40px;background-color: blue;float: left;"></div>
+            <span style="font-size: 12px;line-height: 40px;float: left;margin-left: 10px;">老子天下第一</span>
+        </div>
+    </div>
+    <!-- 登录按钮 -->
+    <a href="#" class="login-button" onclick="openPopup2()">立即登录</a>
+</div>
+
+            </div>
+
+            <!-- logo部分 -->
+            <a href="#" class="logo">
+                <!-- 搞个彩蛋吧 -->
+                <div class="logoBox">
+                    <img src="image\logotencent.png" alt="腾讯的logo" class="logoImg">
+                </div>
+            </a>
+            <!-- logo结束 -->
+        
+            <!-- nav 11-->
+            <div class="navbar">
+                <a href="#">首页</a>
+            
+                <div class="dropdown">
+                    <button class="dropbtn">电视剧
+            
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">电影
+            
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">综艺
+            
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">动漫
+            
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">少儿
+                
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">纪录片
+                
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">全部∨
+                
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">最新</a>
+                        <a href="#">热门</a>
+                        <a href="#">经典</a>
+                    </div>
+                
+                </div>
+            </div>
+            
+            <!-- nav结束 -->
+
+            <!-- 搜索部分 -->
+            <div class="search">
+                <input type="text" placeholder="搜索内容">
+                <button><span class="iconfont icon-sousuo"></span></button>
+            </div>
+            <!-- 搜索部分结束 -->
+        
+            <!-- 用户栏 -->
+            <!-- 5个超链接都可以点点，以后再插图 -->
+            <div class="user">
+        <!-- onclick -->
+                <a href="#"  onclick="openPopup1()"><img src="image\vip666-removebg-preview.png" alt="vip氪金"></a>
+                <a href="#" >
+                    <span class="iconfont icon-shijian" ></span>
+                </a>
+                <a href="#">
+                    <span class="iconfont icon-youxi"></span>
+                </a>
+                <a href="#">
+                    <span class="iconfont icon-shenglvehao"></span>
+                </a>
+                <a href="#">
+                    <span class="iconfont "></span>
+                </a>
+                <a href="#" class="logister  " onclick="openPopup()">
+                    <img src="image\picuser.webp" alt="用户登录">
+                </a>
+            </div>
+            <!-- 用户栏结束 -->
+
+           
+        </header>
+        <!-- 头部结束 -->
+
+        <div class="qqlogist" id="popupBox">
+
+<div class="qqbox">
+    <div class="qqheader">
+        <div class="qqback">&lt</div>
+        <div class="qqtop" style="text-align: center;">QQ账号登录</div>
+        <div class="qqclose" id="closebox" onclick="closePopup()">x</div>
+        <div class="hightlight" style="font-size: 22px;">登录即享高清内容</div>
+    </div>
+    <div class="qqleft">
+        <div class="qqcontainer">
+            <h1 style="font-size: 16px;">密码登录</h1>
+            <div class="wordcenter">
+                <p style="font-size: 12px;">推荐使用<span style="color: #4285f4;font-size: 12px;">快捷登录</span>，防止盗号。</p>
+            </div>
+
+            <div class="qqinput-fields">
+                <input type="text" placeholder="支持QQ号/手机号登录">
+
+            </div>
+            <div class="qqinput-fields">
+
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="qqbuttons">
+                <button>登录</button>
+
+            </div>
+            <div class="qqbuttons1">
+                <button><span style="font-size: 12px;">找回密码</span></button>
+                <button style="font-size: 12px;">注册账号</button>
+                <button style="font-size: 12px;">意见反馈</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="qqright">
+        <div class="qqouter-box">
+            <div class="qqinner-box">
+                <input type="radio" name="sex" id="sex">
+                <label for="sex">全选<span style="color: #4285f4;">腾讯视频</span>将获得以下权限：</label>
+                <br>
+                <input type="radio" name="nu" id="nu">
+                <label for="nu">使用你的QQ头像，名称信息。
+                    <br>
+                    授权即<span style="color: #4285f4;">同意服务协议</span>以及<span style="color: #4285f4;">隐私保护协议</span></label>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</div>
+</div>
+    </div>
+
+
+        </div>
+        <!-- 身体 -->
+        <div class="middlebox">
+
+            <div class="leftbox">
+                <div class="vedioplay custom-video-player">
+                    <div class="danmaku-container"></div>
+                    <video  style="height: 420px;width: 850px;" id="videoPlayer">
+                        <source id="vediosource" src="vedio\寒招视频.mp4" type="video/mp4">
+                    
+                    </video>
+                <div class="controls">
+                    <input type="range" id="seekRange" min="0" value="0">
+                    <label for="speedRange">播放速度:</label>
+                    <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
+                    <label for="volumeRange">音量:</label>
+                    <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="0.5">
+                    <label for="danmakuToggle">弹幕:</label>
+                    <input type="range" id="danmakuToggle" min="0" max="1" step="1" value="0">
+                    <button id="playPauseBtn">播放/暂停</button>
+                    <button id="pictureInPictureBtn">小窗播放</button>
+                    <button id="addDanmakuBtn">添加弹幕</button>
+                </div>
+                </div>
+                   
+
+                <div class="comment">
+                    <div class="zuo">
+                        <span>用户评价</span>
+                    </div>
+                    <div class="you">
+                        <span id="icon1">&lt;  </span>
+                       <span>1</span>
+                       <span id="icon1">&gt;</span>
+                    </div>
+                    <div class="comment1 add1">
+<!-- 评分进度条 -->
+
+             <div class="processcontainer">
+                 <div class="processleft-box">
+                     <div class="processtitle" style="margin-top: 5px;">腾讯评分</div>
+                     <div class="processrating" style="margin-top: 5px;">7.8</div>
+                     <div class="processcomment" style="margin-top: 5px;">28.3万人打分</div>
+                 </div>
+                 <div class="processright-box">
+                     <div class="processrow">
+                         <div class="processlabel">炸爽</div>
+                         <div class="progress-bar">
+                             <div class="progress" style="width: 36%;"></div>
+                         </div>
+                     </div>
+                     <div class="processrow">
+                         <div class="processlabel">推荐</div>
+                         <div class="progress-bar">
+                             <div class="progress" style="width: 10%;"></div>
+                         </div>
+                     </div>
+                     <div class="processrow">
+                         <div class="processlabel">一般</div>
+                         <div class="progress-bar">
+                             <div class="progress" style="width: 28%;"></div>
+                         </div>
+                     </div>
+                     <div class="processrow">
+                         <div class="processlabel">不行</div>
+                         <div class="progress-bar">
+                             <div class="progress" style="width: 11%;"></div>
+                         </div>
+                     </div>
+                     <div class="processrow">
+                         <div class="processlabel">快跑</div>
+                         <div class="progress-bar">
+                             <div class="progress" style="width: 5%;"></div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+                    </div>
+                    <div class="comment1 add2">
+                        <div class="username">
+                            <!-- 插入图标 -->
+                            <span>王耀佳</span>
+                        </div>
+                        <div class="stars">
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span id="bad">真不行</span>
+                        </div>
+                        <div class="word0">
+                            <div class="word1">
+                            <span>欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学</span>
+                            </div>
+                            <div class="sword"><span>还是不考了吧</span></div>
+                        </div>
+                    </div>
+                        
+
+                    <div class="comment1 add3">
+                        <div class="username">
+                        <!-- 插入图标 -->
+                        <span>王耀佳</span>
+                    </div>
+                    <div class="stars">
+                        <span class="star" onclick="rate(this)">★</span>
+                        <span class="star" onclick="rate(this)">★</span>
+                        <span class="star" onclick="rate(this)">★</span>
+                        <span class="star" onclick="rate(this)">★</span>
+                        <span class="star" onclick="rate(this)">★</span>
+                        <span id="bad">真不行</span>
+                    </div>
+                    <div class="word0">
+                        <div class="word1">
+                            <span>欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学</span>
+                        </div>
+                        <div class="sword"><span>还是不考了吧</span></div>
+                    </div>
+                </div>
+
+
+                    <div class="comment1 add4">
+                        <div class="username">
+                            <!-- 插入图标 -->
+                            <span>王耀佳</span>
+                        </div>
+                        <div class="stars">
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span class="star" onclick="rate(this)">★</span>
+                            <span id="bad">真不行</span>
+                        </div>
+                        <div class="word0">
+                            <div class="word1">
+                                <span>欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学欢迎报考广东工业大学</span>
+                            </div>
+                            <div class="sword"><span>还是不考了吧</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="actor">
+                    <div class="actornavbar">
+                        <div class="actortitle">本剧演员</div>
+                        <div class="pagenum">
+                            <span id="icon1">&lt; </span>
+                            <span>1</span>
+                            <span id="icon1">&gt;</span>
+                        </div>
+                        <div class="actor-container">
+                            <div id="actor-name1" class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name ">演员1</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                
+                                <!-- class="dropdown-menu" -->
+                            </div>
+                            <div id="actor-name2" class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name " >演员2</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div id="dropdown-menu">下拉菜单2</div> -->
+                            </div>
+                            <div class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name actor-name3">演员3</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div class="dropdown-menu">下拉菜单3</div> -->
+                            </div>
+                            <div class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name">演员4</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div class="dropdown-menu">下拉菜单4</div> -->
+                            </div>
+                            <div class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name">演员5</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div class="dropdown-menu">下拉菜单5</div> -->
+                            </div>
+                            <div class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name">演员6</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div class="dropdown-menu">下拉菜单6</div> -->
+                            </div>
+                            <div class="actor0">
+                                <div class="actor-photo"></div>
+                                <div class="actor-name">演员7</div>
+                                <div class="single">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- <div class="dropdown-menu">下拉菜单7</div> -->
+                            </div>
+                            <div id="dropdown-menu">
+                                <div class="film" id="film1"></div>
+                                <div class="film" id="film2"></div>
+                                <div class="film" id="film3"></div>
+                                <div class="film" id="film4"></div>
+                                <div class="film" id="film5"></div>
+                                <div class="film" id="film6"></div>
+                                <div class="film" id="film7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="discuss" >
+                    <div class="messagecontainer">
+                        <div class="messagetitle">讨论60706</div>
+                        <div class="messagediscussion">
+                            <div id="handsome"></div>
+                            <div class="input-container">
+                    
+                                <input type="text" id="commentInput" class="comment-input" placeholder="输入评论...">
+                    
+                            </div>
+                            <button onclick="postpl()" class="submit-button">写评论</button>
+                        </div>
+                        <div class="comments" id="commentsSection">
+                            <!-- 已发表的评论将在此处动态添加 -->
+                            <!-- <div ></div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="rightbox" style="position: relative;">
+                <div class="highest" style="position: relative;" >
+                   
+                    <div class="high-close" style="position: absolute;right: 0; border: 1px solid white;height: 14px;text-align: center;line-height: 14px;color: white;">x</div>
+                       
+                    <div class="highest2" style="display: flex;flex-direction: column;">
+                    <div class="high-name" style="color: white;font-size: 20px;">&lt &nbsp王耀佳</div>
+                        <div class="high-tag" style="margin-top: 10px;font-size: 14px;color: cadetblue;">内地</div>
+                        <div class="high-image" style="height: 200px;width: 135px;object-fit: cover;"><img src="image\2.jpg" alt=""></div>
+                        <div class="high-intro" style="color: white;">
+                            <h2>简介</h2>
+                            <p style="word-wrap: break-word;">666</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="asideboxmask"></div> -->
+                <div class="selection"  style="position: relative;background-color: rgba(255, 255, 255, 0.1);">
+                   <!-- id="asideboxbutton" -->
+                    <a  class="wyjwyj"
+                        style="display: block; position: absolute;z-index: 10000; top: 0; right: 0; color: white; position: absolute;right: 120px;top: 2px;font-size: 12px;"
+                        href="#">简介&gt;</a>
+                    <div class="selectioncontainer " id="rightasidebox" style="position: relative;">
+                        
+                        
+                        <!-- <div class="highest"></div> -->
+
+
+                        <div class="selectionbox">
+                            <img src="image\2.jpg" alt="Image" class="selectionimage">
+                            <div class="pink-box" style="position: relative;">
+                                <div class="selectionword0" id="asideboxmask">
+                                    <!-- style="background-color: aqua;" -->
+                                    <span style="font-size: 16px;" >存在bug</span>
+                                    <!-- <span  ></span> -->
+                                    <!-- <button id="asideboxbutton" style="color: white; position: absolute;right: 150px;top: 2px;font-size: 12px;"  >点击修改宽度</button> -->
+                                   
+                                </div>
+                                <div class="selectionword1">
+                                    <span style="font-size: 12px;">a.22735·香港·血腥暴力</span>
+                                </div>
+                                <div class="selectionword2">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectionbox yellow-box">
+                            <span style="font-size: 12px;overflow: hidden;
+    text-overflow: ellipsis;">audfgagfegvlqehfvqeihvi<br>qohiajvn;efhnwlfhilwaehv</span>
+                        </div>
+                        <div class="selectionbox skyblue-box">
+                            <!-- <img src="#" alt="" class="selectionimage2 iconfont icon-shenglvehao"> -->
+                            <div class="selectionimage2 iconfont icon-shoucang sc" ></div>
+                            <div class="selectionimage2 iconfont icon-jingyin"></div>
+                            <div class="selectionimage2 iconfont icon-duihua"></div>
+                        </div>
+                        <div class="box big-box" >
+                            <!-- 20 个小盒子 -->
+                            <div class="small-box">5
+                                <img  class="smallboxpic" src="image\vip.webp" alt="">
+                            </div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                            <div class="small-box">5</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="shortvedio">
+                    <div class="svediocontainer">
+                        <div class="svediobox">
+                            <div class="svediotitle">周边短视频</div>
+                            <div class="svediobutton-container">
+                                <div class="svediobutton">A</div>
+                                <div class="svediobutton">B</div>
+                            </div>
+                        </div>
+                        <div class="svediobox svediocontent-box">
+                            <div class="svedioitem">
+                                <div class="svedioimage">
+                                    <!-- <img src="image\jinbu.jpg" alt=""> -->
+                                </div>
+                                <div class="svediotext">文字1</div>
+                            </div>
+                            <div class="svedioitem">
+                                <div class="svedioimage">
+                                    <!-- <img src="jinbu.jpg" alt=""> -->
+                                </div>
+                                <div class="svediotext">文字2</div>
+                            </div>
+                    
+                        </div>
+                        <div class="svediobox">
+                            <div class="svediogray-button">全部</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="shop"></div>
+
+
+                
+                <div class="recommend">
+                    <div class="recommendcontainer">
+                        <div class="recommendbox recommendtitle">相关推荐</div>
+                        <div class="recommendbox recommendbuttons-container">
+                            <div class="recommendbutton">A</div>
+                            <div class="recommendbutton">B</div>
+                        </div>
+                        <div class="recommendbox recommenditem">
+                            <div class="recommendtop-section"></div>
+                            <div class="recommendbottom-section">
+                                <div class="partA">
+                                    <img class="partAimg" src="image\2.jpg" alt="">
+                                </div>
+                                <div class="partB">
+                                    <span style="font-size: 14px;">钓大鱼</span> 
+                                    <br>
+                                    <span style="font-size: 12px;">asbkjfgqcqkgcql</span>  
+                                </div>
+                                <div class="partC">
+                                    <button style="background:none;color: white;">开始</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommendbox recommenditem">
+                            <div class="recommendtop-section"></div>
+                            <div class="recommendbottom-section"></div>
+                        </div>
+                        <div class="recommendbox recommenditem">
+                            <div class="recommendtop-section"></div>
+                            <div class="recommendbottom-section"></div>
+                        </div>
+                        <div class="recommendbox recommenditem">
+                            <div class="recommendtop-section"></div>
+                            <div class="recommendbottom-section"></div>
+                        </div>
+                        <div class="recommendbox recommenditem">
+                            <div class="recommendtop-section"></div>
+                            <div class="recommendbottom-section"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我没身体啦 -->
+
+        <script>
+           
+        </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js\2.1-301.js"></script>
+<script src="js\2.1-301(2).js"></script>
+<script src="js\2.1-302.js"></script>
+<script src="js\2.2-303.js"></script>
+<script src="js\message.js"></script>
+<!-- <script src="js\videocontrol.js"></script> -->
+<script src="js\qqlogist.js"></script>
+<script src="js\danmu.js"></script>
+<script src="js\danmuget.js"></script>
+<script src="js\danmupost.js"></script>
+
+<script>
+     p2xuanranpic()
+  
+    
+            
+    
+         var btnA = document.getElementById('actor-name2');
+         var btna = document.getElementById('actor-name1');
+            var boxB = document.getElementById('film2');
+            var boxc = document.getElementById('film1');
+            var boxd = document.getElementById('film3');
+            var boxe = document.getElementById('film4');
+            var boxf = document.getElementById('film5');
+            var boxg = document.getElementById('film6');
+            var boxh = document.getElementById('film7');
+
+            // 点击按钮时触发的函数
+            btnA.addEventListener('click', function () {
+                // 切换背景图片
+                boxB.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxc.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxd.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxe.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxf.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxg.style.backgroundImage = "url('image/jinbu.jpg')";
+                boxh.style.backgroundImage = "url('image/jinbu.jpg')";
+                
+            });
+             btna.addEventListener('click', function () {
+                    // 切换背景图片
+                    boxB.style.backgroundImage = "url('image/2.jpg')";
+                    boxc.style.backgroundImage = "url('image/2.jpg')";
+                    boxd.style.backgroundImage = "url('image/2.jpg')";
+                    boxe.style.backgroundImage = "url('image/2.jpg')";
+                    boxf.style.backgroundImage = "url('image/2.jpg')";
+                    boxg.style.backgroundImage = "url('image/2.jpg')";
+                    boxh.style.backgroundImage = "url('image/2.jpg')";
+
+                });
+          
+
+        
+  
+
+                function openPopup() {
+                        var popupBox = document.getElementById("popupBox");
+                        popupBox.style.display = "block";
+                    }
+
+                
+                        
+                    function closePopup() {
+                            var popupBox = document.getElementById("popupBox");
+                            popupBox.style.display = "none";
+                        }
+     
+      function openPopup1() {
+            var popupBox1 = document.getElementById("popupBox1");
+            popupBox1.style.display = "block";
+            console.log('1');
+        }
+        function openPopup2() {
+                var popupBox1 = document.getElementById("popupBox1");
+                popupBox1.style.display = "none";
+                console.log('2');
+            }
+
+
+
+
+            // 4.20修复
+           var wyjwyjElement = document.querySelector('.wyjwyj');
+            var Highest = document.querySelector('.highest')
+            var Highest2 = document.querySelector('.highest2')
+            var highclose = document.querySelector('.high-close')
+            // 添加点击事件监听器
+            var lgh = 0
+            // if (lgh === 0) {
+            //         Highest.style.height = "400px";
+            //         console.log('333333');
+            //     }
+            
+            wyjwyjElement.addEventListener('click', function () {
+                // 在点击事件发生时输出指定的内容
+                console.log('我是最牛的');
+                // Highest.style.display = 'block!important';
+                
+                Highest.style.height =  "1500px";
+                console.log('gaodian');
+
+            });
+            highclose.addEventListener('click', function () {
+                    // 在点击事件发生时输出指定的内容
+                    console.log('我是最牛的');
+                    // Highest.style.display = 'block!important';
+
+                    Highest.style.height = "1px";
+                    console.log('gaodian');
+
+                });
+
+     
+
+
+
+   
+
+
+
+
+
+</script>
+
+
+</html>

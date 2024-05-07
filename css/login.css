@@ -1,0 +1,67 @@
+ .login-box {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 155px;
+    width: 300px;
+     padding: 30px;
+     background-color: #333;
+     /* 设置盒子的背景颜色 */
+     border-radius: 10px;
+     text-align: center;
+     color: #fff;
+     z-index: 201;
+     /* 设置文本颜色为白色 */
+
+ }
+
+ .loginicon-buttons {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     margin: 20px 0;
+     text-align: center;
+ }
+
+ .loginicon-buttons div {
+     width: 40px;
+     height: 40px;
+     /* border-radius: 50%; */
+     margin-bottom: 10px;
+ }
+
+ .loginicon-buttons .blue-icon {
+     /* background-color: skyblue; */
+     width: 200px;
+     height: 40px;
+ }
+
+ .loginicon-buttons .grey-icon {
+     /* background-color: skyblue; */
+     width: 200px;
+     height: 40px;
+ }
+
+ .loginicon-buttons .orange-icon {
+     /* background-color: skyblue; */
+     width: 200px;
+     height: 40px;
+ }
+
+ .loginicon-buttons .yellow-icon {
+     /* background-color: skyblue; */
+     width: 200px;
+     height: 40px;
+ }
+
+ .login-button {
+     display: inline-block;
+     padding: 10px 20px;
+     background-color: #ff7f00;
+     /* 设置登录按钮的颜色 */
+     color: #fff;
+     text-decoration: none;
+     border-radius: 5px;
+     font-weight: bold;
+ }

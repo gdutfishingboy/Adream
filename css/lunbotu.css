@@ -1,0 +1,100 @@
+.content .banner .container {
+    /* outline: 1px solid blue; */
+    position: absolute;  
+    right: 170px;
+    bottom: 60px;
+    width: 400px;
+    height: 200px;
+    background: transparent;
+    z-index: 110;
+}
+
+.content .banner .container .wrapper {
+    height: 200px;
+    position: relative;
+    background: transparent;
+}
+
+.content .banner .container .wrapper .list5 {
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* 隐藏滚动条 */
+}
+
+.content .banner .list5::-webkit-scrollbar {
+    display: none;
+}
+
+.content .banner .item5 {
+    width: 123px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .banner .scrollbar5 {
+    height: 60px;
+    width: 100%;
+    /* outline: 1px dashed red; */
+    display: flex;
+    align-items: center;
+}
+
+.content .banner .scrollbar5 .track5 {
+    background-color: #6d6c6c;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.content .banner .scrollbar5 .track5 .thumb5 {
+    background-color: black;
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    cursor: grab;
+}
+
+.content .banner .scrollbar5 .track5 .thumb5:active {
+    height: 130%;
+    top: -16%;
+    cursor: grabbing;
+}
+
+
+.content .banner .btn {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    /* background-color: #c1bebe; */
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    top: 50%;
+    cursor: pointer;
+}
+
+#prev {
+    left: 0;
+    /* display: none; */
+}
+
+#next {
+    right: 0;
+    /* display: none; */
+}
+
+#next:hover {
+    background-color: #606060;
+}
+
+#prev:hover {
+    background-color: #606060;
+}

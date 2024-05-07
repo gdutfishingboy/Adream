@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Your existing CSS styles */
+        .custom-video-player {
+            position: relative;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 800px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .controls button {
+            border-radius: 10px;
+            margin-right: 5px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .controls input[type="range"] {
+            width: 100px;
+            height: 5px;
+            background-color: rgb(225, 35, 178);
+            border: none;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .controls input[type="range"]::-webkit-slider-thumb {
+            background-color: rgb(215, 25, 155);
+            border: none;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+        }
+
+        .controls input[type="range"]::-webkit-slider-runnable-track {
+            background-color: rgb(0, 0, 0);
+            border-radius: 16px;
+            height: 10px;
+        }
+
+        .controls input[type="range"]:hover::-webkit-slider-runnable-track {
+            background-color: white;
+        }
+
+        #seekRange {
+            margin-top: 10px;
+            width: 100%;
+            height: 5px;
+            background-color: rgb(177, 24, 24);
+            border: none;
+            cursor: pointer;
+        }
+
+        /* New CSS for Danmaku */
+        .danmaku-container {
+            position: relative;
+            width: 900px;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .danmaku-wrapper {
+            position: absolute;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .danmaku {
+            color: white;
+            font-size: 16px;
+            padding: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            animation: danmakuMove linear infinite;
+        }
+
+        @keyframes danmakuMove {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-video-player">
+        <div class="danmaku-container">
+            <video style="width: 900px;height: 450px;" id="videoPlayer">
+                <source src="vedio\寒招视频.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="controls">
+            <input type="range" id="seekRange" min="0" value="0">
+            <label for="speedRange">播放速度:</label>
+            <input type="range" id="speedRange" min="0.5" max="2" step="0.1" value="1">
+            <label for="volumeRange">音量:</label>
+            <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="0.5">
+
+            <button id="playPauseBtn">播放/暂停</button>
+            <button id="pictureInPictureBtn">小窗播放</button>
+        </div>
+    </div>
+</body>
+<script>
+    // Your existing JavaScript code
+
+    // Function to create a new danmaku
+    function createDanmaku(text) {
+        const danmakuWrapper = document.createElement('div');
+        danmakuWrapper.classList.add('danmaku-wrapper');
+        danmakuWrapper.style.top = `${Math.random() * 100}%`; // Random Y position
+        danmakuWrapper.style.left = '100%'; // Start from right side
+
+        const danmakuElement = document.createElement('div');
+        danmakuElement.classList.add('danmaku');
+        danmakuElement.textContent = text;
+        danmakuWrapper.appendChild(danmakuElement);
+
+        // Append danmaku to container
+        const danmakuContainer = document.querySelector('.danmaku-container');
+        danmakuContainer.appendChild(danmakuWrapper);
+
+        // Animate danmaku
+        const animationDuration = 10000; // Adjust speed here
+        danmakuWrapper.animate([
+            { transform: 'translateX(100%)' },
+            { transform: 'translateX(calc(100% - 900px))' }
+        ], {
+            duration: animationDuration,
+            easing: 'linear',
+            iterations: Infinity, // Loop infinitely
+              delay: Math.random() * 2000 // Random delay up to 1 second
+        });
+    }
+
+    // Function to handle multiple danmakus
+    function handleDanmakus(danmakus) {
+        // Split danmakus by line breaks
+        const danmakuLines = danmakus.split('\n');
+
+        // Iterate over each line and create a danmaku for it
+        danmakuLines.forEach((line) => {
+            createDanmaku(line.trim()); // Trim whitespace from each line
+        });
+    }
+
+    // Example usage
+    const danmakus = `这是第一条弹幕
+这是第二条弹幕
+这是第三条弹幕`;
+    handleDanmakus(danmakus);
+
+    // You can call handleDanmakus with a string containing multiple danmakus separated by line breaks
+
+</script>
+
+</html>

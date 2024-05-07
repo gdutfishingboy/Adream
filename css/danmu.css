@@ -1,0 +1,119 @@
+ .custom-video-player {
+     position: relative;
+ }
+
+ .controls {
+     position: absolute;
+     bottom: 10px;
+     left: 54px;
+     width: 742px;
+     background-color: rgba(0, 0, 0, 0.5);
+     padding: 5px;
+     box-sizing: border-box;
+ }
+
+ .controls button {
+     border-radius: 10px;
+     margin-right: 5px;
+     background-color: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
+     border: none;
+     padding: 5px 10px;
+     cursor: pointer;
+ }
+
+ .controls input[type="range"] {
+     width: 100px;
+     height: 5px;
+     background-color: rgb(225, 35, 178);
+     border: none;
+     cursor: pointer;
+     border-radius: 16px;
+ }
+
+ .controls input[type="range"]::-webkit-slider-thumb {
+     background-color: rgb(215, 25, 155);
+     border: none;
+     width: 5px;
+     height: 5px;
+     border-radius: 50%;
+ }
+
+ .controls input[type="range"]::-webkit-slider-runnable-track {
+     background-color: rgb(0, 0, 0);
+     border-radius: 16px;
+     height: 10px;
+ }
+
+ .controls input[type="range"]:hover::-webkit-slider-runnable-track {
+     background-color: white;
+ }
+
+ #seekRange {
+     margin-top: 10px;
+     width: 100%;
+     height: 5px;
+     background-color: rgb(177, 24, 24);
+     border: none;
+     cursor: pointer;
+ }
+
+ #danmakuToggle {
+     width: 30px;
+ }
+
+ /* New CSS for Danmaku */
+ .danmaku-container {
+     position: absolute;
+     z-index: 2;
+     width: 800px;
+     height: 350px;
+     /* Reduced height */
+     overflow: hidden;
+     top: 0;
+     /* Added top: 0 */
+     left: 0;
+     /* Added left: 0 */
+     visibility: hidden;
+     /* Initially hidden */
+ }
+
+ .danmaku-wrapper {
+     position: absolute;
+     /* max-width: 50px; */
+     overflow: hidden;
+     z-index: 3;
+     white-space: nowrap;
+     color: white;
+     /* pointer-events: none; */
+ }
+
+ .danmaku {
+     color: white ;
+    /* max-width: 50px; */
+     font-size: 16px;
+     padding: 5px;
+     /* background-color: rgba(0, 0, 0, 0.5); */
+     border-radius: 5px;
+     animation: danmakuMove linear infinite;
+ }
+
+ @keyframes danmakuMove {
+     from {
+         transform: translateX(100%);
+     }
+
+     to {
+         transform: translateX(calc(100% - 900px));
+     }
+ }
+
+ /* CSS for paused animation */
+ .paused-animation {
+     animation-play-state: paused !important;
+ }
+
+ /* CSS for running animation */
+ .running-animation {
+     animation-play-state: running !important;
+ }

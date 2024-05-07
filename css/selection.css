@@ -1,0 +1,124 @@
+
+ .selectioncontainer {
+     width: 290px;
+     height: 400px;
+     /* background-color: black; */
+     color: white;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .selectionbox {
+    display: flex;
+     margin-top: 5px;
+     overflow: hidden;
+    text-overflow: ellipsis;
+    height: 65px;
+        /* 显示省略号 */
+ }
+
+ .selectionbox:first-child {
+     display: flex;
+     align-items: center;
+ }
+
+ .selectionimage {
+     width: 57px;
+     height: 65px;
+     margin-right: 5px;
+ }
+ .selectionimage2 {
+     position: relative;
+    width: 36px;
+     height: 36px;
+     margin-right: 5px;
+     margin-top: 15px;
+     font-size: 20px;
+     z-index: 190;
+ }
+
+ .pink-box {
+    /* float: right; */
+     width: 250px;
+     height: 64px;
+     background-color: rgba(255, 255, 255, 0.1);
+ }
+
+ .yellow-box {
+     width: 290px;
+     height: 60px;
+     background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 8px
+ }
+
+ .skyblue-box {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     height: 50px;
+     width: 290px;
+     /* margin-top: 0; */
+     background-color: rgba(255, 255, 255, 0.1);
+     border-top: 0.5px solid white;
+     border-bottom: 0.5px solid white;
+ }
+
+ .small-box {
+    position: relative;
+    width: 35px;
+     height: 35px;
+     background-color: rgb(84, 84, 84);
+     border-radius: 3px;
+     text-align: center;
+     line-height: 35px;
+     margin: 2px;
+    z-index: 199;
+ }
+.small-box:hover{
+    background-color: rgba(18, 237, 237, 0.5);
+}
+/* .sc:hover{
+    color: yellow;
+} */
+
+ .big-box {
+     margin-top: 15px;
+    width: 290px;
+     height: 200px;
+     background-color: rgba(94, 94, 94, 0.1);
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: start;
+     align-items: flex-start;
+ }
+ .smallboxpic{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    /* box-sizing: border-box; */
+    object-fit: cover;
+    z-index: 200;
+ }
+
+ .asideboxmask{
+    position: absolute;
+    /* float: left; */
+    right: 0;
+    top: 0;
+        height: 400px;
+        width: 0px;
+        background-color: gray;
+        z-index: 201;
+        transition: width 0.3s ease;
+ }
+ /* #asideboxbutton:hover .asideboxmask{ */
+    /* width: 290px; */
+ /* } */
+ /* #asideboxbutton:hover .asideboxmask{
+    width: 200px;
+ } */
+ .rightbox:hover .asideboxmask{
+    width: 290px;
+ }

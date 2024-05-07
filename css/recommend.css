@@ -1,0 +1,110 @@
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+ }
+
+ .recommendcontainer {
+     width: 290px;
+     height: 800px;
+     /* background-color: black; */
+     display: flex;
+     flex-direction: column;
+ }
+.recommendbox {
+    margin-top: 5px;
+}
+ 
+
+ .recommendtitle {
+     font-size: 20px;
+     color: white;
+     margin-left: 10px;
+ }
+
+ .recommendbuttons-container {
+     display: flex;
+     height: 20px;
+     width: 290px;
+    
+ }
+
+ .recommendbutton {
+     width: 80px;
+     height: 20px;
+     margin-left: 10px;
+     background-color: rgba(255, 255, 255, 0.1);
+     color: white;
+     text-align: center;
+     line-height: 20px;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ .recommendbutton:hover {
+     background-color: #00BFFF;
+     /* 浅蓝色 */
+ }
+
+ .recommendbutton:active {
+     background-color: #00CED1;
+     /* 青蓝色 */
+ }
+
+ .recommenditem {
+     width: 290px;
+     height: 150px;
+     /* background-color: green; */
+     margin-top: 15px;
+     display: flex;
+     flex-direction: column;
+    border-radius: 5px;
+ }
+
+ .recommendtop-section {
+     height: 100px;
+     /* background-color: pink; */
+     background-image: url('../image/jinbu.jpg');
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 5px 5px 0 0;
+ }
+
+ .recommendbottom-section {
+    display: flex;
+     justify-content: space-around;
+    height: 50px;
+     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 5px 5px;
+ }
+
+ 
+ .partA{
+    height: 40px;
+    width: 21px;
+    margin: 5px;
+ }
+ .partA .partAimg {
+    height: 40px;
+    width: 21px;
+    object-fit: cover;
+ }
+ .partB{
+    height: 40px;
+    width: 150px;
+    /* background-color: green; */
+    color: white;
+ }
+ .partC {
+     width: 50px;
+     height: 30px;
+     margin-right: 10px;
+     background-color: rgba(255, 255, 255, 0.1);
+     border-radius: 7px;
+     cursor: pointer;
+     color: white;
+     font-size: 12px;
+     text-align: center;
+     line-height: 30px;
+ }

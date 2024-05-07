@@ -1,0 +1,68 @@
+        .processcontainer {
+            margin-top: 5px;
+            margin-left:3px ;
+            width: 190px;
+            height: 110px;
+            /* background-color: black; */
+            background: transparent;
+            color: white;
+            display: flex;
+        }
+
+        .processleft-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        .processtitle {
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .processrating {
+            font-size: 14px;
+            color: orange;
+            font-weight: bold;
+        }
+
+        .processcomment {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .processright-box {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+
+        .processrow {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .processlabel {
+            flex: 1;
+            font-size: 12px;
+        }
+
+        .progress-bar {
+            flex: 3;
+            height: 4px;
+            background-color: gray;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            border-radius: 2px;
+        }
